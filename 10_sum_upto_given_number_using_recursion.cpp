@@ -7,7 +7,7 @@ void add(int i , int sum){
     return;
     }
     add(i-1,sum+i);
-    
+}
     int main (){
     int number;
     cout <<"Enter your value";

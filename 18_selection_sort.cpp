@@ -1,3 +1,4 @@
+// 2 loop and swap ka kaam h sirf
 #include<bits/stdc++.h>
 using namespace std;
 

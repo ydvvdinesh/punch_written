@@ -20,3 +20,5 @@ int main (){
     cout << "Smallest value in the array"<< smallest << endl;
     return 0;
 }
+
+// brute force - sort kro and first waale ko pakad lo

@@ -18,8 +18,21 @@ arr + 5  = address after last element  if n=5
 using namespace std; 
 void leftrotate(int arr [] , int n ,int d){
     reverse(arr,arr + d);
-    reverse(arr + d, arr+n);
-    reverse(arr, arr+n);
+    reverse(arr + d, arr+n); // for leetcode arr.begin() aisi likhna hog na ki direct
+    reverse(arr, arr+n); 
+ /* if reverse function is not given
+void reverse(int nums[], int start, int end) {
+    while (start < end) {
+        swap(nums[start], nums[end]); 
+        now swap thing
+        int temp = nums[start];
+        nums[start]= nums[end];
+        nums[end]=temp;
+        start++;
+        end--;
+    }
+}
+*/
 }
 int main (){
     int arr[7] = {1,2,3,4,5,6,7};

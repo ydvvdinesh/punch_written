@@ -18,6 +18,7 @@ public:
 Warna (ans empty nahi hai)
  ab safely ans.back() se compare karo
 agar last element ≠ current element → push karo in one */
+                    //mtlb size zero check krne se hume pta lagta jata hai ki seedha push krna hai ya check krke
                     ans.push_back(nums1[i]);
                 }
                 i++;

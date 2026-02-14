@@ -13,7 +13,11 @@ public:
 
         while (i < n1 && j < n2){ // i iterate krega n1 tak mtlb khud ke aarray ke size tak and j2 khud ke size n2 tak
             if (nums1[i] <= nums2[j]){
-                if (ans.size() == 0 || ans.back() != nums1[i]){
+                if (ans.size() == 0 || ans.back() != nums1[i]){  
+                    /*Agar ans empty hai (size == 0) toh bina compare kiye direct nums1[i] ko push kar do
+Warna (ans empty nahi hai)
+ ab safely ans.back() se compare karo
+agar last element ≠ current element → push karo in one */
                     ans.push_back(nums1[i]);
                 }
                 i++;

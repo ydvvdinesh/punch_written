@@ -1,4 +1,4 @@
-//brute force approach - t.c = n^3
+//brute force approach - t.c = (n^3)
 //logic - 2 p0inter se hoga 
 //step-1 ek element khud ka bhi subarray hoga and jo usse next h uska bhi and jo usse next hai uska upto last elements of array, now simiarly aagle index(1) pe aate hai wo khud bhi and aur usse usse including krte huwe saare 
 //step -2 3 loop ka khel hai first loop element pe rhegi and while another one iterate kregi and last waali generate array ka sum nikalegi jo hume given k se compare krenge , equal h toh len hum len varable and j-i+1 obervation se pta lga lenge

@@ -1,4 +1,4 @@
-//better approach 
+//optimal approach for variety 2 jisme index nikalna hai
 // logic - pure me iterate krna hai and requried elemnts jo chayiye target pura krne me usse khelna hai usko , hum ek map data structured lenge jo , required element ko check krenge ki wo map me hai ki nahi , yadi nahi toh hum usse hum me store krwaenenge for future checking yadi hai yes ya value dedenge 
 class Solution {
 public:

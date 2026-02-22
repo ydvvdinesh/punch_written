@@ -4,15 +4,15 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int n = prices.size();
-        int mini = prices[0];
-        int profit = 0;
         int cost;
+        int n = prices.size();
+        int maxiprofit = 0;
+        int mini = prices[0];
         for (int i = 0; i<n; i++){
-            cost = prices[i] - mini; // ye bhai cost dekjh rhe hai , selling day - buying day
-            profit = max(cost,profit); // maximum ka track rakh raha hai
-            mini = min(mini,prices[i]);// ye mini ka
+            cost = prices[i]-mini;
+            maxiprofit = max(cost,maxiprofit);//ye track record rakhte hai piche waale ka 
+            mini = min(prices[i],mini);
         }
-        return profit;
+        return maxiprofit;
     }
 };

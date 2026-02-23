@@ -19,7 +19,7 @@ public:
         reverse(nums.begin(),nums.end());
         return;
        }
-       for(int i = n-1; i>=index;i--){
+       for(int i = n-1; i>index;i--){
         if (nums[i]>nums[index]){
             swap(nums[i],nums[index]);
             break;

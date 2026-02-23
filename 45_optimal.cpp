@@ -1,4 +1,4 @@
-//optimal approach - leader - right me jo maxi hai woh uss number se chota rhena chayiye 
+//optimal approach - leader - right me jo maxi hai woh uss number se chota rhena chayiye YADI HAI toh ledeadr hoga
 class Solution {
 public:
     vector<int> leaders(vector<int>& nums) {

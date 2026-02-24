@@ -9,7 +9,7 @@ public:
         sort(nums.begin(),nums.end());
         int count =0; // track the count of the element which can bhe happened in sequence
         int lastsmaller = INT_MIN; // lastsmaller is the variable tracking the every last appearence of element in the array when move to next element of array
-        int longest =1; // longest is the variable tracking the sabse jada kisi count raha
+        int longest =1; // longest is the variable tracking the sabse jada kisi count raha h
         for (int i = 0; i<n; i++){
             if (nums[i] - 1 == lastsmaller){ // yadi nums ki value me se ek ghatya toh lastnumber hi milega or aage vale ki value se one decrease toh last number hi milega , 
             //yaha pe nums[i]-1 count krnege , lastsmaller toh khud milta jayega yaadi toh same hai iska mtalb lastsmaller +  1 = next number toh consecutive ho gaye na 

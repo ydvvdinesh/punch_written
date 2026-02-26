@@ -1,0 +1,16 @@
+//optimal approach
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        for (int i = 0;i<n-1;i++){ // about this range , we have to swap upper triangle only then why we have to travel comel row and array index 
+        //in array upper triangle khtm hota last wali row ke upper isliye n-1 and and right me jaata hai upto last but start from next to first diagonal element
+            for (int j = i +1; j<n;j++){
+                swap(matrix[i][j],matrix[j][i]);
+            }
+        }
+        for (int i =0; i<n; i++){
+            reverse(matrix[i].begin(),matrix[i].end()); // begin and end likhna because we are dealing with vector
+        }
+    }
+};

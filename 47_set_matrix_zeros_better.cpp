@@ -4,8 +4,8 @@ public:
     void setZeroes(vector<vector<int>>& matrix) {
     int n = matrix.size(); // no of rows
     int m = matrix[0].size(); // no of column
-    vector<int> column(m,0);
-    vector <int> row(n,0);
+    vector<int> column(m,0); //extra column we have to take 
+    vector <int> row(n,0); //extra rows we have to take to check 
     for (int i = 0; i<n; i++){
         for(int j=0; j<m;j++){
             if( matrix[i][j]==0){

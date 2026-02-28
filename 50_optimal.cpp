@@ -1,4 +1,5 @@
 //better approach complete thing
+//Because without a previous prefix sum = (s − k), we cannot form any subarray whose sum is exactly k ending at the current index.
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {

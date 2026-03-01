@@ -15,7 +15,7 @@ vector<int> generaterow(int row){
 }
 class Solution {
 public:
-    vector<vector<int>> generate(int numRows) {
+    vector<vector<int>> generate(int numRows) { //numrows kitni rows hume chayiye
         // now we have to just geneate a colums and then all store to list
        vector<vector<int>> finalanswer;
        for (int i = 1;i<=numRows;i++){ // here indexing starts from 1 , toh eual toh use hoga smje

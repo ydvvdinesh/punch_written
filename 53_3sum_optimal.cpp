@@ -1,4 +1,4 @@
-//optimal solution - 2 pointer approach
+//optimal solution - 2 pointer approach - sirf ye hi working apporach baaki sab time limit error de rahi hai
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {

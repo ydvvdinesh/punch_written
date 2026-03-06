@@ -1,19 +1,17 @@
-//better approach complete thing
-//Because without a previous prefix sum = (s − k), we cannot form any subarray whose sum is exactly k ending at the current index.
+//optimal
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        int count = 0;
+        unordered_map<int,int> mpp;
+        mpp[0]=1;
+         int prefixsum= 0; int count =0;   
         int n = nums.size();
-        for (int i =0; i<n; i++){
-            int sum = 0;
-            for (int j =i;j<n;j++){
-                    sum = sum + nums[j];
-            if(sum == k){
-                        count++;
-                    }
+        for (int i =0;i<n;i++){
+            prefixsum = prefixsum + nums[i];
+            int remove = prefixsum - k;
+            count += mpp[remove];
+            mpp[prefixsum] +=1;
         }
-            }
         return count;
     }
 };

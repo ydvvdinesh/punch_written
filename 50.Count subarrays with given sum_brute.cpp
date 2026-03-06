@@ -3,6 +3,11 @@
 First loop → This chooses the start of the subarray.
 Second loop →This chooses the end of the subarray.
 Third loop (k loop) → This loop actually computes sumof that subarray.
+What happens here
+i → start of subarray
+j → end of subarray
+k → goes inside the subarray to compute the sum
+and in better approach we are not going inside subarray we just add to previous sum
 */
 class Solution {
 public:

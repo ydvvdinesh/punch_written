@@ -4,6 +4,8 @@ public:
     vector<int> findErrorNums(vector<int>& nums) {
         /*complete logic
         array ke sum me total ka natural ka sum - karna hai 
+        x = repeating 
+        y = missing 
          s-sn = x-y
          s2-s2n = x^2 - y^2 
         */
@@ -16,7 +18,7 @@ public:
             s += nums[i];
             s2 += (long long)nums[i] * (long long)nums[i];
         }
-        // now we have to go with operation
+        // now we have to go with operation, now we have to make the two equation to the bot varaible 
         int val1 = s-sn ; //x-y
         int val2 = s2 -s2n;  //x^2 - y^2 till here value value is the difference
         val2 = val2/val1; //here we modify the value val2 to x+y 

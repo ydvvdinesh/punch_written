@@ -1,4 +1,10 @@
 //lowerbound is the smallest index(i) which satisy this conditon arr[i] >= target, target se jo value badi hai woh , yadi equal nahi h toh equal to hai toh woh khud
+//Lower bound is used to find the position where a value should be placed in a sorted array so that the array remains sorted.
+//Upper bound is used to find the position where a value should be placed in a sorted array such that all elements before that position are less than or equal to the value, and the array remains sorted.
+/*
+lower_bound(arr.begin(), arr.end(), x) → first index ≥ x
+upper_bound(arr.begin(), arr.end(), x) → first index > x
+*/
 class Solution {
   public:
     int lowerBound(vector<int>& arr, int target) {

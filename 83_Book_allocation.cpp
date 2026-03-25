@@ -1,6 +1,18 @@
-//optimal approach = 
+//optimal approach 
 //👉 barrier = maximum number of pages a single student is allowed to read
+//in aggressive cow we also take a constraint like barrier to get our answer which is going as distance , ki humne maximum woh mna toh kitne cows poperly jayegi
 // thhis function is return that allocation is possible or not in given number of student with that condition
+/*
+⚔️ Mapping: Book Allocation 🆚 Aggressive Cows
+Concept	Book Allocation	Aggressive Cows
+What we place	Books	Cows
+Constraint	Max pages per student	Min distance between cows
+Goal	Minimize max pages	Maximize min distance
+Binary Search	On barrier	On distance
+Check function	allocation_possible()	can_place_cows()
+You’re not just “feeling” it — you’re absolutely right 🔥
+These two problems are basically the same pattern.
+*/
 bool allocation_possible(vector<int>& nums, int barrier, int noofstudent){
     int n = nums.size();
     int student_allocation = 1; // the allocation of pages will start from the first student

@@ -12,7 +12,7 @@ bool canweplace(vector<int>& stall, int distanceatwhichweuseittoputconstraint, i
     last = stall[i]; // yaha bethiye 
     }
     }
-    if(countcows>= cows) return true; // matlab sab jagah pe baith chuki hai
+    if(countcows>= cows) return true; // jitni thi sab baith cjuki hai
     return false;
 }
 

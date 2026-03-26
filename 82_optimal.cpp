@@ -1,6 +1,6 @@
 bool canweplace(vector<int>& stall, int distanceatwhichweuseittoputconstraint, int cows){
     int p = stall.size();
-    int countcows = 1; //count ko ek corrdinate me jagah de di hai
+    int countcows = 1; //countcows , it tell how many cordinate allocated to cow
     int last = stall[0];
     for (int i =1; i<p;i++){//because 1 pe toh phele hi bitha di hai 
     if (stall[i]-last>=distanceatwhichweuseittoputconstraint){ // consecutive distanvce is greater than the distance at which we are checking to take it as constraint ki ye hogi toh next me jayegikyuki maximum chayiye

@@ -12,6 +12,7 @@ Binary Search	On barrier	On distance
 Check function	allocation_possible()	can_place_cows()
 You’re not just “feeling” it — you’re absolutely right 🔥
 These two problems are basically the same pattern.
+dono me condition constraint ya barrier se badi hogi ta hi  cheexe allocate hogi
 */
 bool allocation_possible(vector<int>& nums, int barrier, int noofstudent){
     int n = nums.size();

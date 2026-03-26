@@ -17,6 +17,7 @@ bool allocation_possible(vector<int>& nums, int barrier, int noofstudent){
     int n = nums.size();
     int student_allocation = 1; // the allocation of pages will start from the first student
     int pages = 0; //current pages assigned to the current student
+    //last in aggresive cows is same equal to pages
     for (int i =0; i<n;i++){
         if (nums[i]>barrier) return false; 
         if (pages + nums[i] > barrier){ //jaise hi current pages + nums[i] mtlb ab dusre ko assign krna 

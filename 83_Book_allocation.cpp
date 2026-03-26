@@ -16,7 +16,7 @@ dono me condition constraint ya barrier se badi hogi ta hi  cheexe allocate hogi
 */
 bool allocation_possible(vector<int>& nums, int barrier, int noofstudent){
     int n = nums.size();
-    int student_allocation = 1; // the allocation of pages will start from the first student
+    int student_allocation = 1; // the allocation of pages to how many student
     int pages = 0; //current pages assigned to the current student
     //last in aggresive cows is same equal to pages
     for (int i =0; i<n;i++){

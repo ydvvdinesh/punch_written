@@ -1,6 +1,8 @@
 //optimal we go with count method , directly finding the number , not merging directly the number
 //yaha humne phele hi bta diye ki yadi ye mile toh done hai seen 
 // thoda sa hypo waala , part humne phele hi total element count kr liye hai, raat lena 
+/*👉 cnt is acting like a virtual index of the merged array
+(bina array banaye, hum uska index simulate kar rahe hain)*/
 ///RAAAAAT LENAAAAAAAAAAAAAAAAAAAAAA
 class Solution {
 public:

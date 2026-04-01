@@ -17,7 +17,7 @@ public:
             }
         // humare mid mtlb jaha hum khde , last element se check krenge , yadi mid last element se bda that means that are in increasing sorted curve so peak dusri curve pe milega because peak aane ke baad curve down hogi hai , jidr peak hoga hum chle jaye and mid waale part ko eliminate kr deneg
         //on left curve
-            else if(nums[mid]>nums[mid-1]){
+            else if(nums[mid]>nums[mid-1]){ //jaha bda hai uss direction me hum chlenge
                 low = mid +1;
             }
             // on right curve

@@ -6,7 +6,7 @@ for (int i = 0; i<n; i++){
     for (int j = i; j<n;j++){
         sub = sub + s[j]; //it generates allsubstring 
     }
-}
+} 
 */ 
 class Solution {
 public:

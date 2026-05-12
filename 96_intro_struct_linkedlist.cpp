@@ -3,7 +3,8 @@
 // through struct class we can tell the address of any variable
 #include<bits/stdc++.h>
 using namespace std;
-struct node{
+struct node{ 
+//node is a class (or structure) that defines how one linked-list node looks. it contains data and next pointer reference
     int data;
     node* next;
     // consturctor - same like class name
@@ -19,7 +20,12 @@ int main(){
     node* y = &x;
     //advance method using new 
     //new node(...) → creates a new node object in heap memory
-   // node* y = new node(ls[0],nullptr);
-    cout << y;
+    /*
+    Every time you write:
+new node(...)
+a new separate node object is created in memory.
+    */
+   /node* y = new node(ls[0],nullptr);
+    cout << y; //y stores the address 
     return 0;
 }

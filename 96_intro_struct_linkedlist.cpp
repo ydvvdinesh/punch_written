@@ -18,6 +18,7 @@ int main(){
     node x = node(ls[0],nullptr);
     node* y = &x;
     //advance method using new 
+    //new node(...) → creates a new node object in heap memory
    // node* y = new node(ls[0],nullptr);
     cout << y;
     return 0;

@@ -25,7 +25,9 @@ int main(){
 new node(...)
 a new separate node object is created in memory.
     */
-   /node* y = new node(ls[0],nullptr);
+    // new node(ls[0],nullptr);use to create a new node that contains data and address null as starting
+    // y stores the address of next variable
+    node* y = new node(ls[0],nullptr);
     cout << y; //y stores the address 
     return 0;
 }

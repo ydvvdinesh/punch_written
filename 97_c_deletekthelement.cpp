@@ -16,7 +16,7 @@ class Solution {
         while(temp != NULL){
             count++;
             if(count == K){
-                prev->next = prev->next->next; // jo previous ka next to next that usko previous ke next se connect kardo
+                prev->next = temp->next;// prev->next->next; // jo previous ka next to next that usko previous ke next se connect kardo
                 delete(temp);
                 break;
             }

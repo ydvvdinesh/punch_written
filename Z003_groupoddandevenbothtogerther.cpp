@@ -12,8 +12,11 @@
 class Solution {
 public:
     ListNode* oddEvenList(ListNode* head) {
-    ListNode* temp =head;
+        ListNode* temp =head;
     vector<int> arr;
+   // edge case
+        if(head == NULL) return head;
+
     //collect odd
     while(temp != NULL && temp->next !=NULL){
         arr.push_back(temp->val);

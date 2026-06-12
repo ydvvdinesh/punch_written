@@ -11,7 +11,7 @@ public:
         int n = arr.size();
         vector<int> nsse(n);
         stack<int> st;
-        for(int i =n-1;i>=0;i++){
+        for(int i =n-1;i>=0;i--){
             //remove all the greater element this time from the stacjk
             while(!st.empty() && arr[st.top()] >= arr[i]){
                 st.pop();
@@ -59,7 +59,7 @@ public:
         for(int i =0; i<n;i++){
             //yaha hum index se distance nikal ke khelenge
             long long leftside = i - previoussmaller[i];
-            long rightside = nextsmaller[i] - i;
+            long long rightside = nextsmaller[i] - i;
             long long contribution = (1LL * arr[i] * leftside % MOD) * rightside % MOD;
             // no of subarray in which contributed leftside * rightside* that number
             total = (total + contribution) % MOD;   
@@ -67,4 +67,3 @@ public:
         return (int)total;
     }
 };
-///code runtime hi de raha hai

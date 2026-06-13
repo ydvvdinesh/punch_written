@@ -13,7 +13,7 @@ public:
         stack<int> st;
         for(int i =n-1;i>=0;i--){
             //remove all the greater element this time from the stacjk
-            while(!st.empty() && arr[st.top()] >= arr[i]){
+            while(!st.empty() && arr[st.top()] >= arr[i]){ //and jaise hum next greater me stack me se value remove kar rahe the vaise hi yaha hum index ke dum pe value check and delete kar rahe hai
                 st.pop();
             }
             if(st.empty()){

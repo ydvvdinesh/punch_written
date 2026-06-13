@@ -49,6 +49,7 @@ public:
     }
 
 //nse and pse same hai bas ek equak to ka difference hai 
+//nse and pse index store krenge 
 
     int sumSubarrayMins(vector<int>& arr) {
         long long total = 0;
@@ -58,7 +59,7 @@ public:
         vector<int> previoussmaller = pse(arr);
         for(int i =0; i<n;i++){
             //yaha hum index se distance nikal ke khelenge
-            long long leftside = i - previoussmaller[i];
+            long long leftside = i - previoussmaller[i]; 
             long long rightside = nextsmaller[i] - i;
             long long contribution = (1LL * arr[i] * leftside % MOD) * rightside % MOD;
             // no of subarray in which contributed leftside * rightside* that number
@@ -67,3 +68,12 @@ public:
         return (int)total;
     }
 };
+
+/*
+Use a stack to find the index of the next smaller element to the right for each position
+Use another stack to find the index of the previous smaller or equal element to the left for each position
+For each element, determine how many subarrays it appears in as the minimum using its NSE and PSEE indices
+Calculate the contribution of each element by multiplying its value with its frequency
+Add each contribution to a total sum
+Return the total sum modulo 10^9 + 7
+*/

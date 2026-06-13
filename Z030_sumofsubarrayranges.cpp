@@ -3,7 +3,7 @@ class Solution {
 public:
     long long subArrayRanges(vector<int>& nums) {
         int n = nums.size();
-        int sum = 0;
+        long long sum = 0;
         //generate all subarray 
         for(int i =0; i<n; i++){
             int largest = nums[i];
@@ -13,7 +13,7 @@ public:
             for (int j = i+1; j<n; j++){
                 largest = max(largest, nums[j]); // it find maximum of that array
                 smallest = min(smallest, nums[j]);
-                sum = sum + (largest-smallest);
+                sum = sum + (long long)(largest-smallest);
             }
         }
         return sum;

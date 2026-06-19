@@ -11,7 +11,7 @@ public:
     
     int next(int price) {
         index = index +1; // it helps us to iterate 
-        while(!st.empty() && st.top().second < price){ //choti hai toh htaoo , yaha value check ho rahi hai
+        while(!st.empty() && st.top().second <= price){ //choti hai toh htaoo , yaha value check ho rahi hai
             st.pop();
         }
         //till we delete all smller element

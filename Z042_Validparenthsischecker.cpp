@@ -11,11 +11,11 @@ public:
         }
         //if opening one
         if(s[index] == '('){
-            solve(index+1, count+1, s);
+            return solve(index+1, count+1, s);
         }
         // if closing one 
         if(s[index] == ')'){
-            solve(index+1, count-1, s);
+            return solve(index+1, count-1, s);
         }
         // if astrik toh teen branch bnegi yadi ek bhi dahi nikali then true 
         /*if(solve(index+1, count+1, s) || solve(index+1, count-1, s) || solve(index+1, count, s)){

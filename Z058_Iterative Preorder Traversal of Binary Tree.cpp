@@ -30,7 +30,6 @@ public:
             if(node->left != NULL){
                 st.push(node->left);
             }
-
         }
         return ans;
     }

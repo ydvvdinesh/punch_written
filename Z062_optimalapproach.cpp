@@ -26,7 +26,7 @@ int maxDepth(TreeNode* root) {
         if(leftheight == -1) return -1;
         int rightheight = maxDepth(node->right);
         if(rightheight == -1) return -1;
-        if(abs((leftheight - rightheight)>1)) return -1;
+        if(abs(leftheight - rightheight)>1) return -1;
         return (1+ max(leftheight, rightheight));
     }
 

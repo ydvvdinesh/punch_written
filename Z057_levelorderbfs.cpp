@@ -27,7 +27,8 @@ public:
             int n = q.size();
             // using this loop ek baar me hi queue me sab aajaye and level me bhi order se aaye
             for(int i = 0; i<n; i++){
-            TreeNode* node = q.front();
+            TreeNode* node = q.front(); // here we are reserving the node kyuki baad me ht jayegi 
+                
             q.pop();
             if(node->left != NULL){
                 q.push(node->left);

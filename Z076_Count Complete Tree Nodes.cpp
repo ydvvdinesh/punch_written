@@ -1,0 +1,30 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+ //brute force any traversal and and count the value, every time 
+class Solution {
+public:
+
+    void inorder(TreeNode* root, int &count){
+        if(root == NULL){
+            return;
+        }
+        count++;
+        inorder(root->left, count);
+        inorder(root->right, count);
+    }
+
+    int countNodes(TreeNode* root) {
+        int min =0;
+        inorder(root, min);
+        return min;
+    }
+};

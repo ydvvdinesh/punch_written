@@ -14,7 +14,7 @@ class Solution {
 public:
 
     //function used to vreate the tree using preorder and inorder traversal 
-    TreeNode* createtree(vector<int>& preorder, int prestart, int preend, vector<int>& inorder,int instart, int inend, map<int, int> inMap){
+    TreeNode* createtree(vector<int>& preorder, int prestart, int preend, vector<int>& inorder,int instart, int inend, map<int, int> &inMap){
         //function is taking all details of preorder and iorder and return us the root 
         // we are going in making sub part or subtree, after o
         // we are playing by making parts 

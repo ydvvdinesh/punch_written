@@ -1,1 +1,44 @@
-
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+ //optimal approach - bahut tarike ke hai insert karne ke but we are going with , yadi given value chota hai root se toh hum aayega take null na aaye
+class Solution {
+public:
+    TreeNode* insertIntoBST(TreeNode* root, int val) {
+        if(root == NULL){
+            return new TreeNode(val);
+        }
+        TreeNode* curr = root;
+        while(curr != NULL){
+            //yadi root ki value choti hai toh 
+            if(curr->val < val){
+                // jab right pe null ajaye toh ruk jayenge wahaa attach kreneh otherwise chalte rheneg
+                if(curr->right != NULL){
+                    curr = curr->right;
+                }
+                else{
+                    curr->right = new TreeNode(val);
+                    break;
+                }
+            }
+            else{
+                if(curr->left != NULL){
+                    curr = curr->left;
+                }
+                else{
+                    curr->left = new TreeNode(val);
+                    break;
+                }
+            }
+        }
+        return root;
+    }
+};

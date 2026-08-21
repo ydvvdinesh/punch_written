@@ -9,6 +9,8 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+//note - thoda difficult hai but easy hai
+
  //hasnext - kya agla element hai 
  // next - value dega next element ki 
  //approach - send all left to stack then all node then right 

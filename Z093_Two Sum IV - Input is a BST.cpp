@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+ //simple ha couple of node jinki value k equal yadi hai toh true otherwise false
  //find out the inorder , which is sorted for the bst and then go with two pointer
 class Solution {
 public:

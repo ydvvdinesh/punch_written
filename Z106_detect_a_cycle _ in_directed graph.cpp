@@ -9,7 +9,9 @@ public:
         for(auto it : prerequisites[node]){
             if(vis[it] == 0){
                 // yadi visit nahi toh visted krwaao dfs ko call karke
-                dfscheck(it,vis,previs, prerequisites, ans);
+                if(dfscheck(it,vis,previs, prerequisites, ans) == true){
+                    return true;
+                };
             }
             //yadi visited hai and dobara previs 1 hai toh true return kardo
             else if(previs[it] == 1){

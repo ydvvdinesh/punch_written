@@ -1,4 +1,4 @@
-//topo sort only works in DAG DIRECTED ACYCLIC GRAPH , this algo gives you a order if the graph in in u is greater than in v in order , u->v
+//topo sort only works in DAG DIRECTED ACYCLIC GRAPH , this algo gives you a order if the graph in in u is appears first thanin v in order , u->v
 //ek dum easy hai , traverse krte raho , list dekh ke and dfs call karlo wo direct traverse kar lega 
 class Solution{
 public:

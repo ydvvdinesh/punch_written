@@ -4,6 +4,9 @@ class Solution {
 public:
     int f(int n, vector<int>& heights, vector<int>& dp){
         if(n == 0) return 0;
+        if(dp[n] != -1){
+            return dp[n];
+        }
         int right = INT_MAX;
         //left and right recursion mai hume term rakhi hai , left me hum 1 index chlenege and right me hum 2 index chlenge 
         //isme saath saath energy bhi dekhni hai 
@@ -11,7 +14,7 @@ public:
         if(n>1){
             right = f(n-2, heights, dp) + abs(heights[n] - heights[n-2]);
         }
-        return min(left, right);
+        return dp[n] = min(left, right);
     }
     
     int frogJump(vector<int>& heights) {

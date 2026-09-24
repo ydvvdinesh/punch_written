@@ -1,6 +1,8 @@
 //generate all subarra with is unique , hum same question ohele kar chuke hai 
 //phele sort kro and next woh lena hai jo different ho
 //unique lene hai toh har baar next me move karta hai
+//ye jo skip karne jhai woh not taking part mai karne hai , dry kro sab clear ho jayega 
+
 class Solution {
 public:
 

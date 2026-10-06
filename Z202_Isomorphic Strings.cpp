@@ -1,5 +1,4 @@
 ///2 baar dekh lena concept bhi thoda sa confusing 
-
 //dono string ko yaad rakhna pdega , we all know yadi koi cheeze remeber karni hai toh hum hashmap or hashing or hasharray use karna hi pdega 
 //dono string ko daalo alag has
 //isomorphicString condition 0 dono ka same size hona chayiye and mutliple mapping nahi hogi domain ke element ki , one to one function ki traay kaam krega 

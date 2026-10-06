@@ -5,6 +5,7 @@ at one flip - bcdea
 at 2 flip - cdeab
 at 3 flip - deabc , jitni flip bole utne eelement uthoo and same order mai last mai rakh do  
 */
+
 //brute force 
 class Solution{	
 	public:

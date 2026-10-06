@@ -1,5 +1,6 @@
 //recurison
 // ye || =same phele jaise hai maximum profi btana bus , isme hum kitni baar bhi stock ko buy aur sell kar skate hai bus dusra tabhi but kar skte hai jab phela sale ho  
+
 class Solution{
 public:
     int func(int ind, int buy, vector<int>& arr, vector<vector<int>>& dp){

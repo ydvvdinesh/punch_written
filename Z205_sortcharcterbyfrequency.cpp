@@ -16,6 +16,7 @@ class Solution{
 			//step -1 we declare pair which consist frequency and charcter and jiska frequency sabse jaada woh sabse aage aayenge and yadi dono ki frequency same hai toh diticonary ke hisab se aayenge then
             //1. declare a pair
             pair<int,char> freq[26];
+			
             //now intilize with zero and charcter
             for(int i = 0; i<26;i++){
                 freq[i] = {0, i+'a'};

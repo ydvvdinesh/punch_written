@@ -7,7 +7,7 @@ public:
 
      // we have to return maximum profit 
      //buy ko zero or 1 mai khikyenge 
-    int func(int day, int buy, int cap, vector<int> arr, vector<vector<vector<int>>> dp){
+    int func(int day, int buy, int cap, vector<int>& arr, vector<vector<vector<int>>>& dp){
         int n = arr.size();
         //base case 
         if(day == n || cap ==0) return 0;
@@ -36,7 +36,7 @@ public:
     }
 
     int stockBuySell(vector<int> arr, int n, int k){
-        vector<vector<vector<int>>> dp(n, vector<vector<int>>(2,vector<int>(3,-1)));
+        vector<vector<vector<int>>> dp(n, vector<vector<int>>(2,vector<int>(k+1,-1)));
         return func(0,1,k,arr,dp);
     }
 };

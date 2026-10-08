@@ -23,7 +23,7 @@ public:
                     //toh sirf closing badhegi
                     close++;
                 }
-            }
+            } 
         }
         //when loops completes it gives us  close and open bracket numbers 
         int minireversal = open/2 + open%2 + close/2 + close%2;

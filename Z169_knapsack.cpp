@@ -1,3 +1,4 @@
+//target find the maximum value at any how
 //eay one , bus rember one thing , we are going with the same approach pick it or not pick it , if we picking up then we have to think about the capcity of bag, that is represents by W, yes baaki same hai dp 14 ki trh usme true false return kar na isliye koi value add nahi kar rahe the but abhi maximum value return karni hai toh add  kar rahe hai 
 class Solution{
     public:

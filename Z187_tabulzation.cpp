@@ -3,51 +3,34 @@
 
 class Solution {
    public:
-    // i is the index of start string and j is the index of target string
-    // this function gives us a answer that tells us the minimum no of the
-    // operations used to convert s1(0.....i) to s2(0............j)
-    int func(int i, int j, string start, string target,
-             vector<vector<int>>& dp) {
-        int n = start.size();
-        int m = target.size();
-        // base case
-        if (i < 0) {
-            return j + 1;  // j+1 operation lgegnge target bnana mai yadi start
-                           // puri traverse kardi toh
-        }
-        if (j < 0) {
-            return i + 1;
-        }
-        if (dp[i][j] != -1) {
-            return dp[i][j];
-        }
-        // exxplore all possiblites
-        // if the two index matched, toh operation karke ki koi jaroort nahi hai
-        // agle pe badho , isliye value 0 aayegi
-        if (start[i] == target[j]) {
-            return dp[i][j] = 0 + func(i - 1, j - 1, start, target, dp);
-        }
-        // yadi matched nai hai toh , alag hai matlab toh humne pass teen tarike
-        // hai
-        else {
-            // 1, isliye kyuki ek inseration huwa nah
-            // inseration mtlb woh index pe cheez add ho gayi toh toh phele
-            // index toh wahi rheg and dusra piche aayega kyuki jo humne insert
-            // koya usse merged ho jayega
-            int insertion = 1 + func(i, j - 1, start, target, dp);
-            // deletion kiya toh start waale pe move krenge , ek piche jayegnge
-            // and target waala wahi rhega common sense
-            int deleteion = 1 + func(i - 1, j, start, target, dp);
-            // replace mai dono hi piche jayegnge kyuki phele waala matched kar
-            // hi hayega
-            int replacegame = 1 + func(i - 1, j - 1, start, target, dp);
-            return dp[i][j] = min(insertion, min(deleteion, replacegame));
-        }
-    }
     int editDistance(string start, string target) {
         int n = start.size();
         int m = target.size();
-        vector<vector<int>> dp(n, vector<int>(m, -1));
-        return func(n - 1, m - 1, start, target, dp);
+        // same hai bus string me zero based indexing and , in comparing one
+        // based ,
+        vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+        // base case
+        // indexing ki wajah se ab j hi aayega and usme i hi aayega , kyuki ab
+        // last 0hi hoga phele -1 that ab 1 based indexing ka game chlega
+        for (int i = 0; i <= n; i++) {
+            dp[i][0] = i;
+        }
+        for (int j = 0; j <= m; j++) {
+            dp[0][j] = j;
+        }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                //-1 isliye ab zero hi aayega bounde se bahar nahi jayega
+                if (start[i - 1] == target[j - 1]) {
+                    dp[i][j] = 0 + dp[i - 1][j - 1];
+                } else {
+                    int insertion = 1 + dp[i][j - 1];
+                    int deleteion = 1 + dp[i - 1][j];
+                    int replacegame = 1 + dp[i - 1][j - 1];
+                    dp[i][j] = min(insertion, min(deleteion, replacegame));
+                }
+            }
+        }
+        return dp[n][m];
     }
 };
